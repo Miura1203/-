@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北関東学院について</title>
+    <link rel="stylesheet" href="./school.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <section id="navigation">
+            <div class="topver">
+                <div class="img_logo">
+                    <a href="./index.html"><img src="./kitakan_img/logo.png" alt="logomark"></a>
+                </div>
+                <!-- ハンバーガーメニュー -->
+                <div class="openbtn" id="target">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- メニュー内部 -->
+
+            <nav>
+                <ul>
+                    <li>
+                        <h4>北関東学院について</h4>
+                    </li>
+                    <li><a href="./school.html">当校について</a></li>
+                    <li><a href="#">講師について</a></li>
+                    <li><a href="#">講師・スタッフ紹介</a></li>
+                    <li><a href="#">
+                            <h4>コースについて</h4>
+                        </a></li>
+                    <li><a href="#">WEBプログラミングデザイン</a></li>
+                    <li><a href="#">WEBデザインクリエイター</a></li>
+                    <li><a href="#">WEBフロントエンド構築科</a></li>
+                </ul>
+            </nav>
+
+            <!-- サイドメニュー -->
+
+            <ul class="side_ul">
+                <li><a href="#kitakan">北関東学院</a></li>
+                <li><a href="#teacher">講師について</a></li>
+                <li><a href="#teacher_staff">講師・スタッフ</a></li>
+                <li><a href="#">コース</a></li>
+            </ul>
+        </section>
+
+    </header>
+
+    <main>
+        <section id="kitakan">
+            <div class="kitakan_content">
+                <h2 class="backnumber01">北関東学院について</h2>
+                <p>北関東学院はパソコン関連の仕事を目指す求職者支援訓練（職業訓練）です。<br>
+                    パソコンを使ったお仕事に苦手意識を持っている方や、<br>
+                    独学で勉強してみたけど挫折してしまった方に向けて、<br>
+                    就職・技術面を全力でサポートします。
+                </p>
+            </div>
+        </section>
+
+        <section id="teacher">
+            <h2 class="backnumber02">講師について</h2>
+
+            <div>
+                <h3>現役デザイナーが講師</h3>
+                <p>授業は、現在もフリーランスでWEBデザイナーとして活躍している<br>
+                    講師の方々がデザインやプログラムの技術を教えてくれます。
+                </p>
+            </div>
+            <div>
+                <h3>モットーについて</h3>
+                <p>丁寧にわかりやすく、わからないところを残さないよう基礎を<br>
+                    しっかり身に着けてもらうことを常に心掛けて授業しています。<br>
+                    もしわからないところがあってもわかるまで丁寧に教えるので、
+                    安心して授業を受けられます。
+                </p>
+            </div>
+
+        </section>
+
+        <!-- 講師・スタッフ -->
+
+        <section id="teacher_staff">
+            <h2 class="backnumber03">講師・スタッフ紹介</h2>
+            <div class="teacher_img">
+                <img src="./kitakan_img/teacher's/mori02.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/matsumura02.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/ogawa_k.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/ishida.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/kanai.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/hyodo.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/kato.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/kudo02.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/kamiyama.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/tanaka_c.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/tsuda.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/ogawa.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/ishimaru.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/yamada.jpg" alt="teacher's">
+                <img src="./kitakan_img/teacher's/kawamura.jpg" alt="teacher's">
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // メニュー
+        $('#target').click(() => {
+            $('.openbtn').toggleClass('menu_active');
+            $('nav').toggleClass('nav_active');
+        });
+    </script>
+</body>
+
+</html>

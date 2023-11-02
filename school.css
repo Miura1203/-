@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: bottom;
+}
+
+/* 共通パーツ */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff8ec;
+    line-height: 1.7;
+    letter-spacing: 0.1rem;
+}
+
+main {
+    width: 80%;
+    margin: 160px auto;
+    height: 500vh;
+}
+
+section {
+    border-bottom: 1px solid #000;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+h2 {
+    position: relative;
+    font-size: 4.8rem;
+    margin-top: 160px;
+}
+h3{
+    font-size: 3.2rem;
+}
+
+
+img {
+    width: 100%;
+}
+/* header */
+
+.topver {
+    padding: 16px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+
+.img_logo {
+    width: 200px;
+}
+
+/* ------ハンバーガーメニュー------ */
+.openbtn {
+    background-color: gold;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.openbtn:hover{
+    border-radius: 50%;
+    animation-name: menupoint;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+@keyframes menupoint {
+    10%{
+        transform: scale(0.7);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+/* 三本線設定 */
+.topver span {
+    background-color: #fff8ec;
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+}
+
+.topver span:nth-child(1) {
+    top: 18px;
+}
+
+.topver span:nth-child(2) {
+    top: 25px;
+}
+
+.topver span:nth-child(3) {
+    top: 32px;
+}
+
+/* ------メニュー押した後------ */
+
+.menu_active span:nth-child(1) {
+    width: 13px;
+    top: 37%;
+    left: 50%;
+    transform: rotate(45deg);
+}
+
+.menu_active span:nth-child(3) {
+    width: 13px;
+    top: 58%;
+    left: 50%;
+    transform: rotate(-45deg);
+}
+
+/* ------メニュー画面------ */
+
+nav h4 {
+    margin:12px 0;
+    text-align: left;
+}
+
+nav {
+    position: fixed;
+    width: 30vw;
+    height: 100vh;
+    background-color: gold;
+    right: 0;
+    z-index: 998;
+    transform: translateX(100%);
+    transition: all 0.7s;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav_active {
+    transform: translateX(0);
+}
+
+
+/* ------ハンバーガーメニュー終わり------ */
+
+/* ------サイドバー------ */
+
+.side_ul {
+    position: fixed;
+    right: -10px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.side_ul li {
+    list-style: none;
+    transform: rotate(90deg);
+    text-align: center;
+}
+
+.side_ul a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.side_ul a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: gold;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: all 0.3s;
+}
+
+.side_ul a:hover::before{
+    transform: scaleX(1);
+}
+
+/* ------サイドバー終わり------ */
+
+/* ------北関東学院について------ */
+
+/* 後ろの文字 */
+.backnumber01::before {
+    position: absolute;
+    content: "#01";
+    font-size: 11.2rem;
+    opacity: 0.1;
+    left: 22%;
+    bottom: 0px;
+    transform: rotate(90deg);
+    color: darkblue;
+}
+
+.kitakan_content{
+    margin: 64px 0;
+}
+
+/* ------講師について------ */
+
+
+/* 後ろの文字 */
+.backnumber02::before {
+    position: absolute;
+    content: "#02";
+    font-size: 11.2rem;
+    opacity: 0.1;
+    left: 22%;
+    bottom: 0px;
+    transform: rotate(90deg);
+    color: darkblue;
+}
+
+/* ------講師・スタッフ------ */
+
+
+/* 後ろの文字 */
+.backnumber03::before {
+    position: absolute;
+    content: "#03";
+    font-size: 11.2rem;
+    opacity: 0.1;
+    left: 22%;
+    bottom: 0px;
+    transform: rotate(90deg);
+    color: darkblue;
+}
+
+.teacher_img{
+    display: flex;
+    flex-wrap: wrap;
+}
+.teacher_img img{
+    max-width: 240px;
+}
